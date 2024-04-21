@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+This module for task "Simple pagination"
+"""
 import csv
 import math
 from typing import (List, Tuple)
@@ -15,15 +18,20 @@ def index_range(page: int, page_size: int) -> Tuple[int]:
 
 
 class Server:
-    """Server class to paginate a database of popular baby names.
+    """
+    Server class to paginate a database of popular baby names.
     """
     DATA_FILE = "Popular_Baby_Names.csv"
 
     def __init__(self):
+        """
+        This method initializes the server object.
+        """
         self.__dataset = None
 
     def dataset(self) -> List[List]:
-        """Cached dataset
+        """
+        This method caches the dataset in the server object.
         """
         if self.__dataset is None:
             with open(self.DATA_FILE) as f:
