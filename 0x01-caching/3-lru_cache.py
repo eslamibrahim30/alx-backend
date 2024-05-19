@@ -25,6 +25,7 @@ class LRUCache(base_caching.BaseCaching):
         elif len(self.cache_data) == self.MAX_ITEMS:
             disKey = self.recent.pop(0)
             self.cache_data.pop(disKey)
+            print(f"DISCARD: {disKey}")
         self.cache_data.update({key: item})
         self.recent.append(key)
 
