@@ -11,5 +11,8 @@ def index():
     """
     This function returns the root html file
     """
-    return render_template('index.html')
+    return render_template('0-index.html')
 
+
+if __name__ == "__main__":
+    app.run(debug=True)
