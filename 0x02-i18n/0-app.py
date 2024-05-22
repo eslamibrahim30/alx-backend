@@ -11,4 +11,5 @@ def index():
     """
     This function returns the root html file
     """
-    return render_template('./templates/0-index.html')
+    return render_template('index.html')
+
